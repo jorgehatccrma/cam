@@ -148,9 +148,9 @@
     UIDeviceOrientation deviceOrientation = [[UIDevice currentDevice] orientation];
     
     switch (deviceOrientation) {
-        case UIDeviceOrientationPortraitUpsideDown:
-            orientation = AVCaptureVideoOrientationPortraitUpsideDown;
-            break;
+//        case UIDeviceOrientationPortraitUpsideDown:
+//            orientation = AVCaptureVideoOrientationPortraitUpsideDown;
+//            break;
         case UIDeviceOrientationLandscapeLeft:
             orientation = AVCaptureVideoOrientationPortrait;
             break;
@@ -158,7 +158,8 @@
             orientation = AVCaptureVideoOrientationLandscapeLeft;
             break;            
         default:
-            orientation = AVCaptureVideoOrientationPortrait;
+//            orientation = AVCaptureVideoOrientationPortrait;
+            orientation = DEVICE_ORIENTATION_DEFAULT;
             break;
     }
     
