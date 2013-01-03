@@ -174,6 +174,7 @@
     }
 }
 
+
 #pragma mark - AVCaptureFileOutputRecordingDelegate
 - (void)captureOutput:(AVCaptureFileOutput *)captureOutput didFinishRecordingToOutputFileAtURL:(NSURL *)outputFileURL fromConnections:(NSArray *)connections error:(NSError *)error
 {
@@ -250,6 +251,7 @@
         case DIYCamModeVideo:
             if ([DIYCamUtilities isVideoCameraAvailable]) {
                 [self establishVideoMode];
+                [_preview orientationDidChange];  // for some reason, without this line, the initial preview appears in the wrong location?!
             } else {
                 [self.delegate camDidFail:self withError:[NSError errorWithDomain:@"com.diy.cam" code:101 userInfo:nil]];
             }

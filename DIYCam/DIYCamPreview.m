@@ -86,12 +86,12 @@
     BOOL isLandscape;
     
     switch (videoOrientation) {
-        case AVCaptureVideoOrientationPortrait:
-            isLandscape = false;
-            break;
-        case AVCaptureVideoOrientationPortraitUpsideDown:
-            isLandscape = false;
-            break;
+//        case AVCaptureVideoOrientationPortrait:
+//            isLandscape = false;
+//            break;
+//        case AVCaptureVideoOrientationPortraitUpsideDown:
+//            isLandscape = false;
+//            break;
         case UIDeviceOrientationLandscapeLeft:
             isLandscape = true;
             break;
@@ -99,7 +99,7 @@
             isLandscape = true;
             break;
         default:
-            return false;
+            return true;
             break;
     }
     
